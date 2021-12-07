@@ -1,0 +1,187 @@
+:root {
+  --brandColor: rgb(43, 124, 49);
+  --background: rgb(247, 247, 247);
+  --textDark: hsla(0, 0%, 0%, 0.767);
+  --textLight: hsla(0, 0%, 0%, 0.712);
+}
+
+table {
+  font-size: 12px;
+  width: 100%;
+  text-align: center;
+  display: table;
+  border: 3px solid rgb(43, 124, 49);
+}
+
+td {
+  padding: 1px;
+}
+
+@media only screen and (max-width: 760px),
+  (min-device-width: 768px) and (max-device-width: 1024px) {
+  /* Force table to not be like tables anymore */
+  table{
+    display: block;
+    font-size: 12px;
+    width: 100%;
+    text-align: center;
+    border: 3px solid rgb(43, 124, 49);
+  }
+
+  tbody{
+    display: block;
+    font-size: 12px;
+    width: 100%;
+    text-align: center;    
+  }
+
+  td{
+    display: block;
+    font-size: 12px;
+    width: 100%;
+    text-align: center;
+    border: 3px solid rgb(43, 124, 49);
+  }
+
+  tr {
+    display: block;
+    font-size: 12px;
+    width: 100%;
+    text-align: center;
+    border: 3px solid rgb(43, 124, 49);
+  }
+
+  th {
+    display: none;
+  }
+
+
+  td {
+    /* Behave  like a "row" */
+    border: none;
+    border-bottom: 1px solid rgb(43, 124, 49);
+    position: relative;
+    padding-left: 50%;
+  }
+
+  td:before {
+    position: absolute;
+    text-align: center;
+    left: 6px;
+    width: 45%;
+    padding-right: 10px;
+    white-space: nowrap;
+    font-weight: bold;
+  }
+
+  /*
+	Label the data
+	*/
+  td:nth-of-type(1):before {
+    content: "Tipo";
+  }
+  td:nth-of-type(2):before {
+    content: "Parcela";
+  }
+  td:nth-of-type(3):before {
+    content: "Crédito em Conta Corrente";
+  }
+  td:nth-of-type(4):before {
+    content: "Crédito para Compras";
+  }
+  td:nth-of-type(5):before {
+    content: "Total";
+  }
+  td:nth-of-type(6):before {
+    content: "Taxa";
+  }
+}
+
+body {
+  background: var(--background);
+  height: 100vh;
+  color: var(--textDark);
+}
+
+.field:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.register {
+  margin-top: 5%;
+  background: white;
+  border-radius: 10px;
+}
+
+.left,
+.right {
+  padding: 2.5rem;
+}
+
+.left {
+  border-left: 5px solid var(--background);
+}
+
+.left .title {
+  font-weight: 800;
+  letter-spacing: -2px;
+  text-align: center;
+}
+
+.left .colored {
+  color: var(--brandColor);
+  font-weight: 500;
+  margin-top: 1rem !important;
+  letter-spacing: -1px;
+  font-weight: 800;
+}
+
+.right .colored {
+  color: var(--brandColor);
+  font-weight: 500;
+  margin-top: 1rem !important;
+  letter-spacing: -1px;
+  font-weight: 800;
+}
+
+.left p {
+  color: var(--textLight);
+  font-size: 1.15rem;
+}
+
+.left img {
+  filter: opacity(10%) grayscale(100%);
+  margin-top: 20%;
+}
+
+.right .title {
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+
+.right .description {
+  margin-top: 1rem;
+  margin-bottom: 1rem !important;
+  color: var(--textLight);
+  font-size: 1.15rem;
+}
+
+.right small {
+  color: var(--textLight);
+}
+
+input:focus {
+  border-color: var(--brandColor) !important;
+  box-shadow: 0 0 0 1px var(--brandColor) !important;
+}
+
+radio:checked {
+  border-color: var(--brandColor) !important;
+  box-shadow: 0 0 0 1px var(--brandColor) !important;
+}
+
+.fab,
+.fas {
+  color: var(--textLight);
+  margin-right: 1rem;
+}
