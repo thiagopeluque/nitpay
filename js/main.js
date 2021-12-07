@@ -45,9 +45,6 @@ function calcular(e) {
     currency: 'BRL' 
   });
 
-  console.log(cartao);
-  console.log(valor);
-
   if (valor !== 0 && cartao !== null) {
     fetch("js/taxas.json")
       .then((resolve) => resolve.json())
