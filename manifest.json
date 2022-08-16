@@ -1,0 +1,22 @@
+{
+    "background_color": "#2b7c31",
+    "description": "Simulador Nitpay",
+    "dir": "ltr",
+    "display": "standalone",
+    "name": "nitpay.madeiranit.com",
+    "orientation": "any",
+    "scope": "/",
+    "short_name": "nitpay.madeiranit.com",
+    "start_url": "/",
+    "theme_color": "#ffffff",
+    "categories": [],
+    "screenshots": [],
+    "icons": [
+      {
+        "src": "images/favicon.png",
+        "type": "image/png",
+        "sizes": "144x144"
+      }
+    ],
+    "shortcuts": []
+  }

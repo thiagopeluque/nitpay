@@ -8,6 +8,7 @@
     <title>Simulador NitPay | Madeiranit</title>
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="images/favicon.png" />
+    <link rel="manifest" href="manifest.json">
 
     <script src="https://kit.fontawesome.com/15181efa86.js" crossorigin="anonymous"></script>
     
@@ -101,7 +102,16 @@
             $(this).mask('R$ #.###.##0,00', {reverse: true});
         });     
     </script>
-
+    <script>
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('./sw.js')
+          .then(function () {
+            console.log('service worker registered');
+          })
+          .catch(function () {
+            console.warn('service worker failed');
+          });
+      }
+    </script>
   </body>
-
 </html>
