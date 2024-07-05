@@ -1,117 +1,135 @@
 <!DOCTYPE html>
 <html>
 
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Simulador NitPay | Madeiranit</title>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="shortcut icon" href="images/favicon.png" />
-    <link rel="manifest" href="manifest.json">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Simulador NitPay | Madeiranit</title>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" href="images/favicon.png" />
+  <link rel="manifest" href="manifest.json">
 
-    <script src="https://kit.fontawesome.com/15181efa86.js" crossorigin="anonymous"></script>
-    
-    <link rel="stylesheet" href="https://unpkg.com/bulma@0.9.0/css/bulma.min.css" />
-    <link rel="stylesheet" type="text/css" href="css/register.css">
-    <link rel="stylesheet" type="text/css" href="css/styles.css">
+  <script src="https://kit.fontawesome.com/15181efa86.js" crossorigin="anonymous"></script>
 
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/bulma@0.9.0/css/bulma.min.css" />
+  <link rel="stylesheet" type="text/css" href="css/register.css">
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
 
-  </head>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
 
-  <body>
-    <section class="container">
-      <div class="columns is-multiline">
-        <div class="column is-12 register">
-          <div class="columns is-centered">
-            
-            <div id="result" class="column right has-text-centered">
-              <img src="images/logo.png" />
-              <h1 class="title is-4 colored">Faça uma Simulação</h1>
-              <p class="description">Preencha o campo abaixo com o valor desejado e escolha a Bandeira do Cartão de Crédito</p>
-              <form>
-                <div class="field">
+</head>
+
+<body>
+  <section class="container">
+    <div class="columns is-multiline">
+      <div class="column is-12 register">
+        <div class="columns is-centered">
+
+          <div id="resultado" class="column right has-text-centered">
+            <img src="images/logo.png" />
+            <h1 class="title is-4 colored">Faça uma Simulação</h1>
+            <p class="description">Preencha o campo abaixo com o valor desejado e escolha a Bandeira do Cartão de Crédito</p>
+            <form>
+              <div class="field">
+                <div class="control">
+                  <input id="valor" class="input is-medium" type="tel" placeholder="R$ 10.000,00">
+                </div>
+              </div>
+
+              <div class="field">
+                <div class="control">
                   <div class="control">
-                    <input id="valor" class="input is-medium" type="tel" placeholder="R$ 10.000,00">
+                    <label class="radio">
+                      <input type="radio" name="cartao" value="visa">
+                      <img src="images/visalogo.png" />
+                    </label>
+                    <label class="radio">
+                      <input type="radio" name="cartao" value="mastercard">
+                      <img src="images/masterlogo.png" />
+                    </label>
+                    <label class="radio">
+                      <input type="radio" name="cartao" value="elo">
+                      <img src="images/elologo.png" />
+                    </label>
+                    <label class="radio">
+                      <input type="radio" name="cartao" value="hipercard">
+                      <img src="images/hiperlogo.png" />
+                    </label>
+                    <label class="radio">
+                      <input type="radio" name="cartao" value="amex">
+                      <img src="images/amexlogo.png" />
+                    </label>
+                    <label class="radio">
+                      <input type="radio" name="cartao" value="diners">
+                      <img src="images/dinerslogo.png" />
+                    </label>
                   </div>
                 </div>
+              </div>
 
-                <div class="field">
-                  <div class="control">
-                    <div class="control">
-                      <label class="radio">
-                        <input type="radio" name="cartao" id="cartao" value="visa">
-                        <img src="images/visalogo.png"/>
-                      </label>
-                      <label class="radio">
-                        <input type="radio" name="cartao" id="cartao" value="mastercard">
-                        <img src="images/masterlogo.png"/>
-                      </label>
-                      <label class="radio">
-                        <input type="radio" name="cartao" id="cartao" value="elo">
-                        <img src="images/elologo.png"/>
-                      </label>
-                      <label class="radio">
-                        <input type="radio" name="cartao" id="cartao" value="hipercard">
-                        <img src="images/hiperlogo.png"/>
-                      </label>
-                      <label class="radio">
-                        <input type="radio" name="cartao" id="cartao" value="amex">
-                        <img src="images/amexlogo.png"/>
-                      </label>
-                      <label class="radio">
-                        <input type="radio" name="cartao" id="cartao" value="diners">
-                        <img src="images/dinerslogo.png"/>
-                      </label>
-                    </div>
+              <div class="field">
+                <div class="control">
+                  <h2 class="subtitle" for="contrato">Selecione a opção de seu contrato</h2>
+                  <div class="select is-medium is-fullwidth">
+                    <select id="contrato">
+                      <option value="" disabled selected>Selecione uma opção</option>
+                      <option value="30">70% Conta Cliente - 30% Compras Madeiranit</option>
+                      <option value="40">60% Conta Cliente - 40% Compras Madeiranit</option>
+                      <option value="50">50% Conta Cliente - 50% Compras Madeiranit</option>
+                      <option value="60">40% Conta Cliente - 60% Compras Madeiranit</option>
+                      <option value="70">30% Conta Cliente - 70% Compras Madeiranit</option>
+                      <option value="80">20% Conta Cliente - 80% Compras Madeiranit</option>
+                    </select>
                   </div>
                 </div>
-                <button class="button is-block is-success is-fullwidth is-large" onclick="calcular(event)">Calcular</button>
-                <br />
-                <small id="aviso"><em>Clique em Calcular e aguarde o resultado</em></small>
-              </form>
-            </div>
+              </div>
 
-            <div class="column left is-4">
-              <h2 class="subtitle colored is-4">Simulador de Parcelamento</h2>
-              <p>O <strong>NitPay</strong> é mais uma facilidade que a Madeiranit oferece aos clientes marceneiros de aumentarem sua <strong>Condição de Crédito</strong>, oferencendo um meio de pagamento <strong>adicional</strong> aos Clientes</p>
-              <img src="images/madeiranit_logo.png" />
-            </div>
+              <p id="contrato-mensagem" class="has-text-warning"></p>
 
+              <button class="button is-block is-success is-fullwidth is-large" onclick="calcular(event)">Calcular</button>
+              <br />
+              <small id="aviso"><em>Clique em Calcular e aguarde o resultado</em></small>
+            </form>
           </div>
-        </div>
 
-        <div class="column is-7 is-offset-1">
-            <div class="level-right">
-              <small class="level-item" style="color: var(--textLight)">
-                &copy; Grupo Madeiranit. Todos os Direitos Reservados.
-              </small>
-            </div>
-          </nav>
+          <div class="column left is-4">
+            <h2 class="subtitle colored is-4">Simulador de Parcelamento</h2>
+            <p>O <strong>NitPay</strong> é mais uma facilidade que a Madeiranit oferece aos clientes marceneiros de aumentarem sua <strong>Condição de Crédito</strong>, oferencendo um meio de pagamento <strong>adicional</strong> aos Clientes</p>
+            <img src="images/madeiranit_logo.png" />
+          </div>
+
         </div>
       </div>
-    </section>
-    <script src="js/main.js"></script>
-    <script>
-      $("#valor").keypress(function() {
-            $(this).mask('R$ #.###.##0,00', {reverse: true});
-        });     
-    </script>
-    <script>
-      if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('./sw.js')
-          .then(function () {
-            console.log('service worker registered');
-          })
-          .catch(function () {
-            console.warn('service worker failed');
-          });
-      }
-    </script>
-  </body>
+
+      <div class="column is-7 is-offset-1">
+        <div class="level-right">
+          <small class="level-item" style="color: var(--textLight)">
+            &copy; Grupo Madeiranit. Todos os Direitos Reservados.
+          </small>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script src="js/main.js"></script>
+  <script>
+    $("#valor").mask('000.000.000.000.000,00', { reverse: true });
+  </script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('./sw.js')
+        .then(function () {
+          console.log('service worker registered');
+        })
+        .catch(function () {
+          console.warn('service worker failed');
+        });
+    }
+  </script>
+</body>
+
 </html>
