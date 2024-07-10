@@ -33,6 +33,25 @@
           <div id="resultado" class="column right has-text-centered">
             <img src="images/logo.png" />
             <h1 class="title is-4 colored">Faça uma Simulação</h1>
+
+            <div class="field">
+              <div class="control">
+                <h2 class="subtitle" for="contrato">Selecione a opção de seu contrato</h2>
+                <div class="select is-medium is-fullwidth">
+                  <select id="contrato">
+                    <option value="" disabled selected>Selecione uma opção</option>
+                    <option value="30">70% Conta Cliente - 30% Compras Madeiranit</option>
+                    <option value="40">60% Conta Cliente - 40% Compras Madeiranit</option>
+                    <option value="50">50% Conta Cliente - 50% Compras Madeiranit</option>
+                    <option value="60">40% Conta Cliente - 60% Compras Madeiranit</option>
+                    <option value="70">30% Conta Cliente - 70% Compras Madeiranit</option>
+                    <option value="80">20% Conta Cliente - 80% Compras Madeiranit</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <p id="contrato-mensagem" class="has-text-warning"></p>
             <p class="description">Preencha o campo abaixo com o valor desejado e escolha a Bandeira do Cartão de Crédito</p>
             <form>
               <div class="field">
@@ -71,25 +90,6 @@
                   </div>
                 </div>
               </div>
-
-              <div class="field">
-                <div class="control">
-                  <h2 class="subtitle" for="contrato">Selecione a opção de seu contrato</h2>
-                  <div class="select is-medium is-fullwidth">
-                    <select id="contrato">
-                      <option value="" disabled selected>Selecione uma opção</option>
-                      <option value="30">70% Conta Cliente - 30% Compras Madeiranit</option>
-                      <option value="40">60% Conta Cliente - 40% Compras Madeiranit</option>
-                      <option value="50">50% Conta Cliente - 50% Compras Madeiranit</option>
-                      <option value="60">40% Conta Cliente - 60% Compras Madeiranit</option>
-                      <option value="70">30% Conta Cliente - 70% Compras Madeiranit</option>
-                      <option value="80">20% Conta Cliente - 80% Compras Madeiranit</option>
-                    </select>
-                  </div>
-                </div>
-              </div>
-
-              <p id="contrato-mensagem" class="has-text-warning"></p>
 
               <button class="button is-block is-success is-fullwidth is-large" onclick="calcular(event)">Calcular</button>
               <br />
