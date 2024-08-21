@@ -13,7 +13,6 @@ function obterValorRadio(nome) {
   const radios = document.getElementsByName(nome);
   for (const radio of radios) {
     if (radio.checked) {
-      console.log(radio.value);
       return radio.value;
     }
   }
@@ -36,7 +35,6 @@ const formatadorMoeda = new Intl.NumberFormat('pt-BR', {
 
 // Função para realizar os cálculos de débito
 function calcularDebito(valor, cartao, json, taxaSubordinado) {
-  console.log(valor, cartao, json, taxaSubordinado);
   const { markup_master } = json;
   let percSubordinado = taxaSubordinado - (json[cartao].debito + markup_master);
   let liquidoSubordinado = (valor * percSubordinado) / 100;
@@ -56,7 +54,6 @@ function calcularDebito(valor, cartao, json, taxaSubordinado) {
 
 // Função para realizar os cálculos de crédito
 function calcularCredito(valor, cartao, json, taxaSubordinado) {
-  console.log(valor, cartao, json, taxaSubordinado);
   const { markup_master, taxas_rr } = json;
   for (const [indice, valorTaxaCredito] of Object.entries(json[cartao].credito)) {
     let percSubordinado = taxaSubordinado - (valorTaxaCredito + taxas_rr[indice] + markup_master);
